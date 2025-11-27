@@ -1,7 +1,16 @@
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import Head from "./components/Head";
+import store from "./utils/store";
 
 function App() {
   return (
-    <h1>Namaste React</h1>
+    <Provider store={store}>
+      <>
+        <Head/>
+        <Body/>
+      </>
+    </Provider>
   );
 }
 
